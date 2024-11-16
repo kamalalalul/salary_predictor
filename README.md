@@ -72,10 +72,16 @@ To run the application using Docker:
 
 3. Access the API: Open your browser and go to http://localhost:8000.
 
+4. Pull the docker image: You can also pull the docker image from DockerHub: 
+- Link: https://hub.docker.com/r/kamalalalul/salary_predictor.
+- Docker Pull Command: 
+   ```bash
+   docker pull kamalalalul/salary_predictor
+
 ## API Endpoints
 1. Root Endpoint:
-URL: /
-Method: GET
+URL: /.
+Method: GET.
 Description: Returns a welcome message.
 Response:
    ```json
