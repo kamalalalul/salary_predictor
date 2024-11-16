@@ -33,7 +33,14 @@ The dataset used for training the model is `Salary_dataset.csv`, which contains 
 The model is a simple linear regression model trained using the `scikit-learn` library. It takes the `YearsExperience` as input and predicts the `Salary`.
 
 ## Project Structure
-├── main.py # Code to clean data, train model, and export it as joblib ├── app.py # FastAPI application for serving the model ├── User.py # Pydantic model for input validation ├── requirements.txt # Python dependencies ├── linear_regression_model.joblib # Saved model in joblib format ├── Salary_dataset.csv # Dataset used for training ├── Dockerfile # Docker configuration file └── README.md # Project documentation
+├── main.py # Code to clean data, train model, and export it as joblib 
+├── app.py # FastAPI application for serving the model 
+├── User.py # Pydantic model for input validation 
+├── requirements.txt # Python dependencies 
+├── linear_regression_model.joblib # Saved model in joblib format 
+├── Salary_dataset.csv # Dataset used for training 
+├── Dockerfile # Docker configuration file 
+└── README.md # Project documentation
 
 
 ## Installation
@@ -48,16 +55,17 @@ The model is a simple linear regression model trained using the `scikit-learn` l
    git clone https://github.com/kamalalalul/salary_predictor.git
    cd salary-predictor-ml-api
 2. **Create a virtual environment and activate it:**
-
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
 3. **Install the dependencies:**
-
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 
 4. **Run the FastAPI application:**
-uvicorn app:app --reload
+   ```bash
+   uvicorn app:app --reload
 
 5. **Access the API:** 
 Open your browser and go to http://127.0.0.1:8000.
@@ -66,15 +74,14 @@ Open your browser and go to http://127.0.0.1:8000.
 To run the application using Docker:
 
 1. Build the Docker image:
-
-docker build -t salary-predictor.
+   ```bash
+   docker build -t salary-predictor
 
 2. Run the Docker container:
-
-docker run -d -p 8000:8000 salary-predictor
+   ```bash
+   docker run -d -p 8000:8000 salary-predictor
 
 3. Access the API: Open your browser and go to http://localhost:8000.
-
 
 ## API Endpoints
 1. Root Endpoint
@@ -82,29 +89,29 @@ URL: /
 Method: GET
 Description: Returns a welcome message.
 Response:
-json
-Copy code
-{
-  "message": "Salary Predictor ML API. This model predicts the annual salary of an employee in USD based on their years of experience. It is a simple linear regression model created using a 1-feature dataset."
-}
+   ```json
+   
+   {
+     "message": "Salary Predictor ML API. This model predicts the annual salary of an employee in USD based on their years of experience. It is a simple linear regression model created using a 1-feature dataset."
+   }
 2. Predict Salary
 URL: /salary/predict
 Method: POST
 Description: Predicts the salary based on years of experience.
 Request Body:
-
-{
-  "years": 5.0
-}
+   ```json
+   {
+     "years": 5.0
+   }
 
 Response:
+   ```json
+   {
+     "prediction": 76543.21
+   }
 
-{
-  "prediction": 76543.21
-}
-
-### Contributing
+## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or new features.
 
-### License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
