@@ -42,7 +42,7 @@ The model is a simple linear regression model trained using the `scikit-learn` l
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/kamalalalul/salary_predictor.git
-   cd salary-predictor-ml-api
+   
 2. **Create a virtual environment and activate it:**
    ```bash
    python -m venv venv
@@ -73,7 +73,7 @@ To run the application using Docker:
 3. Access the API: Open your browser and go to http://localhost:8000.
 
 ## API Endpoints
-1. Root Endpoint
+1. Root Endpoint:
 URL: /
 Method: GET
 Description: Returns a welcome message.
@@ -83,7 +83,7 @@ Response:
    {
      "message": "Salary Predictor ML API. This model predicts the annual salary of an employee in USD based on their years of experience. It is a simple linear regression model created using a 1-feature dataset."
    }
-2. Predict Salary
+2. Predict Salary:
 URL: /salary/predict
 Method: POST
 Description: Predicts the salary based on years of experience.
