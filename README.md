@@ -32,18 +32,6 @@ The dataset used for training the model is `Salary_dataset.csv`, which contains 
 ## Model
 The model is a simple linear regression model trained using the `scikit-learn` library. It takes the `YearsExperience` as input and predicts the `Salary`.
 
-## Project Structure
-
-├── main.py # Code to clean data, train model, and export it as joblib
-├── app.py # FastAPI application for serving the model 
-├── User.py # Pydantic model for input validation 
-├── requirements.txt # Python dependencies 
-├── linear_regression_model.joblib # Saved model in joblib format 
-├── Salary_dataset.csv # Dataset used for training 
-├── Dockerfile # Docker configuration file 
-└── README.md # Project documentation
-
-
 ## Installation
 
 ### Prerequisites
